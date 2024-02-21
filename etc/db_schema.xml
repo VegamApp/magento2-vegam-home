@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package Vegam_Homepage
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="vegam_homedesign" resource="default" engine="innodb" comment="Block">
+        <column xsi:type="int"      name="design_id" unsigned="true" nullable="false" padding="10" identity="true" comment="Design Id"/>
+        <column xsi:type="varchar"  name="type" nullable="false" length="250" comment="type"/>
+        <column xsi:type="varchar"  name="name" nullable="false" length="250" comment="Name"/>
+        <column xsi:type="varchar"  name="description" nullable="false" length="255" comment="Description"/>
+        <column xsi:type="varchar"  name="store" nullable="false" length="50" comment="Sore"/>
+        <column xsi:type="varchar" name="banner_template" nullable="true" comment="Banner Template"/>
+        <column xsi:type="text"     name="banner_serialized" nullable="true" comment="Banner Serialize"/>
+        <column xsi:type="varchar"  name="category_id" nullable="false" length="250" comment="Category"/>
+        <column xsi:type="varchar"  name="product_count" nullable="false" comment="Product_Count" default="10"/> 
+        <column xsi:type="varchar"  name="product_type" nullable="false" length="250" comment="ProductType"/>
+        <column xsi:type="text"    name="product_ids" nullable="true" comment="Product Ids"/>
+        <column xsi:type="smallint" name="show_title" nullable="false" comment="Show Title"/>
+        <column xsi:type="smallint" name="block_status" nullable="false" comment="BlockSatus" default="1"/>
+        <column xsi:type="smallint" name="status" nullable="false" comment="Status"/>
+        <column xsi:type="smallint" name="mobile_status" nullable="false" comment="MobileStatus"/>
+        <column xsi:type="smallint" name="viewall_status" nullable="false" comment="ViewallStatus"/>
+        <column xsi:type="smallint" name="position" nullable="false" comment="Position"/>
+        <column xsi:type="varchar"  name="display_style" nullable="false" length="250" comment="DisplayStyle"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="design_id"/>
+        </constraint>
+    </table>
+</schema>

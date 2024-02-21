@@ -1,0 +1,14 @@
+{
+    "name": "vegam/homepage",
+    "description": "Homepage module for Vegam App",
+    "type": "magento2-module",
+    "version": "1.0.6",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Vegam\\Homepage\\": ""
+        }
+    }
+}

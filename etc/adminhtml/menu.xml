@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package Vegam_Homepage
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+  <menu>
+    <add id="Vegam_Homepage::menus" title="Vegam" translate="title" module="Vegam_Homepage" sortOrder="10" resource="Vegam_Homepage::menus"/>
+    <add id="Vegam_Homepage::menus_homeblock" title="Homepage Design" module="Vegam_Homepage" sortOrder="60" parent="Vegam_Homepage::menus" action="homeblock/index/index" resource="Vegam_Homepage::menus"/>
+  </menu>
+</config>

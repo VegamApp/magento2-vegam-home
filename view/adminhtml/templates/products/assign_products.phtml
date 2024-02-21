@@ -1,0 +1,24 @@
+<?php
+/**
+ * @package Vegam_Homepage
+ */
+?>
+<?php
+    $blockGrid = $block->getBlockGrid();
+    $gridJsObjectName = $blockGrid->getJsObjectName();
+?>
+<?= $block->getGridHtml() ?>
+<input type="hidden" name="rh_products" data-form-part="block_product_form" id="rh_products" value=""  />
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Vegam_Homepage/js/assign-products": {
+                "selectedProducts":  <?= /* @noEscape */ $block->getProductsJson() ?>,
+                "gridJsObjectName": <?= /* @noEscape */ '"' . $gridJsObjectName . '"' ?: '{}' ?>
+            }
+        }
+    }
+</script>
+<script>
+    require('mage/apply/main').apply();
+</script>

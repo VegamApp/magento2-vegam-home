@@ -1,0 +1,8 @@
+/**
+ * @package Vegam_Homepage
+ */
+.admin__menu .level-0.item-menus > a:before {
+    background: url(../images/logo.svg) no-repeat center;
+    background-size: contain;
+    content: '';
+}
